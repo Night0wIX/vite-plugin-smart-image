@@ -1,0 +1,10 @@
+[build]
+entry = "src/index.ts"
+outdir = "dist"
+target = "node"
+minify = true
+sourcemap = true
+external = ["vite"]
+
+[install]
+lockfile = true

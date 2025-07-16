@@ -1,0 +1,63 @@
+{
+  "name": "vite-plugin-smart-image",
+  "description": "Smart and powerful image processing plugin for Vite - responsive, optimized, typed, and production-ready out of the box",
+  "keywords": [
+    "vite",
+    "vite-plugin",
+    "plugin",
+    "image",
+    "sharp",
+    "optimizer",
+    "typescript",
+    "javascript",
+    "bun"
+  ],
+  "license": "MIT",
+  "version": "0.1.0",
+  "author": {
+    "name": "Night0wIX",
+    "email": "night0wix01@gmail.com",
+    "url": "https://github.com/Night0wIX"
+  },
+  "homepage": "https://github.com/Night0wIX/vite-plugin-smart-image#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Night0wIX/vite-plugin-smart-image"
+  },
+  "bugs": {
+    "url": "https://github.com/Night0wIX/vite-plugin-smart-image/issues",
+    "email": "night0wix01@gmail.com"
+  },
+  "files": [
+    "dist",
+    "docs/README.md",
+    "docs/LICENSE"
+  ],
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "~5.8.3",
+    "vite": "^7.0.4"
+  },
+  "peerDependencies": {
+    "vite": "^4 || ^5 || ^6 || ^7"
+  },
+  "engines": {
+    "node": ">=18",
+    "bun": ">=1.0.0"
+  }
+}

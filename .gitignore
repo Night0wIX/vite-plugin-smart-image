@@ -1,0 +1,16 @@
+# Logs
+*.log
+
+# OS/Editor/System
+.DS_Store
+
+# Node / JavaScript / TypeScript
+**/node_modules/
+**/dist/
+**/generaged/ 
+
+# Vitest
+coverage/
+
+# Env / Local Config
+.env.*

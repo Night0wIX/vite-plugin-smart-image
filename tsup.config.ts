@@ -15,5 +15,5 @@ export default defineConfig({
     };
   },
   external: ["vite"],
-  outDir: "dist"
+  outDir: "dist",
 });

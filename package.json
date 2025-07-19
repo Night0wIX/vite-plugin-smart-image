@@ -46,13 +46,18 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prepare": "husky install",
+    "lint:fix": "eslint . --fix",
+    "format:fix": "prettier --write ."
   },
   "dependencies": {},
   "devDependencies": {
     "@trivago/prettier-plugin-sort-imports": "^5.2.2",
     "eslint": "^9.31.0",
     "eslint-plugin-unicorn": "^59.0.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.2",
     "prettier": "^3.6.2",
     "tsup": "^8.5.0",
     "typescript": "~5.8.3",

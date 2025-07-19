@@ -1,13 +1,11 @@
 import js from "@eslint/js";
 
 import unicorn from "eslint-plugin-unicorn";
-import vitest from "eslint-plugin-vitest";
 import globals from "globals";
 import tseslint from "typescript-eslint";
 
 const tsFiles = ["**/*.ts", "**/*.tsx"];
 const jsFiles = ["**/*.js", "**/*.cjs", "**/*.mjs"];
-const testFiles = ["**/*.spec.ts", "**/*.spec.tsx", "**/*.test.ts", "**/*.test.tsx"];
 
 export default [
   // ---------------------------

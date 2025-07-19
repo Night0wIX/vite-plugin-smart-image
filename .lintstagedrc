@@ -1,0 +1,4 @@
+{
+  "**/*.{json,md}": ["bun run format:fix"],
+  "**/*.{js,ts}": ["bun run format:fix", "bun run lint:fix"]
+}

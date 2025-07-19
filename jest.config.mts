@@ -32,7 +32,7 @@ const config: Config = {
           },
         },
       },
-    ]
+    ],
   },
 
   // Coverage configuration

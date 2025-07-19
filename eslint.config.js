@@ -1,11 +1,13 @@
 import js from "@eslint/js";
 
+import eslintJest from "eslint-plugin-jest";
 import unicorn from "eslint-plugin-unicorn";
 import globals from "globals";
-import tseslint from "typescript-eslint";
+import eslintTS from "typescript-eslint";
 
 const tsFiles = ["**/*.ts", "**/*.tsx"];
 const jsFiles = ["**/*.js", "**/*.cjs", "**/*.mjs"];
+const testFiles = ["tests/unit/**/*.spec.ts", "tests/integration/**/*.spec.ts"];
 
 export default [
   // ---------------------------
@@ -29,12 +31,12 @@ export default [
   // ---------------------------
   // TypeScript rules
   // ---------------------------
-  ...tseslint.configs.recommended,
+  ...eslintTS.configs.recommended,
 
   {
     files: tsFiles,
     languageOptions: {
-      parser: tseslint.parser,
+      parser: eslintTS.parser,
       parserOptions: {
         project: ["./tsconfig.json"],
         tsconfigRootDir: process.cwd(),
@@ -99,6 +101,27 @@ export default [
       "unicorn/consistent-function-scoping": "warn",
       "unicorn/prefer-string-slice": "warn",
       "unicorn/prefer-structured-clone": "warn",
+    },
+  },
+
+  // ---------------------------
+  // Jest configuration (Unit & Integration testing)
+  // ---------------------------
+  {
+    files: testFiles,
+    plugins: {
+      jest: eslintJest,
+    },
+    languageOptions: {
+      globals: { jest: true },
+    },
+    rules: {
+      "jest/no-disabled-tests": "warn",
+      "jest/no-focused-tests": "error",
+      "jest/no-identical-title": "error",
+      "jest/prefer-to-have-length": "warn",
+      "jest/valid-expect": "error",
+      "jest/consistent-test-it": "error",
     },
   },
 ];
